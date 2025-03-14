@@ -1,0 +1,25 @@
+name: dotnet
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [macos-latest, ubuntu-latest, windows-latest]
+        dotnet: ['10.x']
+
+    steps:
+    - uses: actions/checkout@v6
+    - name: Setup .NET ${{ matrix.dotnet }}
+      uses: actions/setup-dotnet@v5
+      with:
+        dotnet-version: ${{ matrix.dotnet }}
+    - name: Test
+      run: dotnet test -c Release --verbosity normal

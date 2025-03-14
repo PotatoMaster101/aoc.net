@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <Authors>PotatoMaster101</Authors>
+    <Copyright>Copyright (c) 2025 PotatoMaster101</Copyright>
+    <Description>A .NET library for Advent of Code stuff.</Description>
+    <FileVersion>1.0.0</FileVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <PackageId>aoc</PackageId>
+    <PackageLicenseExpression>GPL-3.0-or-later</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/PotatoMaster101/aoc.net</PackageProjectUrl>
+    <PackageReleaseNotes>Initial release</PackageReleaseNotes>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Product>aoc.net</Product>
+    <RepositoryUrl>https://github.com/PotatoMaster101/aoc.net</RepositoryUrl>
+    <TargetFramework>net10.0</TargetFramework>
+    <Title>aoc.net</Title>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <CheckForOverflowUnderflow>true</CheckForOverflowUnderflow>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+  </PropertyGroup>
+
+</Project>
